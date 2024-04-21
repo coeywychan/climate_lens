@@ -17,8 +17,9 @@ module.exports = {
             template:'./src/index.html'
         }),
         new CopyWebpackPlugin([
-            { from: './src/manifest.json', to:'./', flatten:true },
-            { from: './src/assets/img/icons/*', to:'./', flatten:true }
+            // { from: './src/manifest.json', to:'./', flatten:true },
+            { from: './src/assets/img/icons/*', to:'./', flatten:true },
+            { from: './src/*', to:'./', flatten:true }
         ], {
             copyUnmodified: true
         })

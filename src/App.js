@@ -6,7 +6,7 @@ import React from 'react';
 import ClimateLens from './climateLens';
 
 function App() {
-    return(<Script/>)
+    return(<ClimateLens/>)
 }
 
 ReactDOM.render(
