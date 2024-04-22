@@ -3,10 +3,7 @@
   "version": "1.0",
   "description": "Simple chrome extension with climate lens",
   "manifest_version": 3,
-  "action": {
-    "default_title": "Extension Boilerplate",
-    "default_icon": "get_started16.png"
-  },
+  "action": {},
   "background": {
     "service_worker": "background.js"
   },
@@ -16,7 +13,7 @@
       "js": ["content.js"]
     }
   ],
-  "permissions": ["sidePanel", "tabs"],
+  "permissions": ["sidePanel", "tabs", "storage"],
   "host_permissions": [
     "https://www.washingtonpost.com/weather/*",
     "https://developer.mozilla.org/*"

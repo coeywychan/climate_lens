@@ -2,13 +2,14 @@
 //     console.log('background.js')
 // });
 //
-const ORIGIN = 'https://www.washingtonpost.com';
 
+const ORIGIN = 'https://www.washingtonpost.com';
 
 // Allows users to open the side panel by clicking on the action toolbar icon
 chrome.sidePanel
     .setPanelBehavior({ openPanelOnActionClick: true })
     .catch((error) => console.error(error));
+
 
 chrome.tabs.onUpdated.addListener(async (tabId, info, tab) => {
     if (!tab.url) return;
@@ -28,3 +29,5 @@ chrome.tabs.onUpdated.addListener(async (tabId, info, tab) => {
         });
     }
 });
+
+

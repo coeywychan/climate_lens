@@ -1,16 +1,29 @@
-import React from 'react';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import React, {useEffect} from 'react';
 import Container from 'react-bootstrap/Container';
 
 export default function WhatIf(props) {
 
+    useEffect(() => {
+        let video = document.querySelector("video");
+        if (video) {
+            video.playbackRate = 0.25;
+            video.loop = true;
+        }
+    })
+
+    let media;
+    if (props.data.includes("data:image/"))
+        media = <img alt="" src={props.data} style={{maxHeight: 100}}/>
+    else {
+        media = <div dangerouslySetInnerHTML={{__html: props.data}}/>
+    }
+
     return (
         <Container>
-            <h4>What if HK?</h4>
+            <div className="section-title">What if HK?</div>
             <div align={'center'}>
-                <img alt="" src={`data:image/jpeg;base64,${props.img}`} style={{maxHeight: 100}} />
-                <div>{ props.text }</div>
+                {media}
+                <div>{props.text}</div>
             </div>
         </Container>
     )

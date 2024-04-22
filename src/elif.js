@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 export default function Elif(props) {
     return (
         <Container >
-            <h4>ELIF</h4>
+            <div className="section-title">ELIF</div>
             <div align={'center'}>
                 <div>{ props.data }</div>
             </div>

@@ -5,10 +5,10 @@ export default function News(props) {
 
     return (
         <Container>
-            <h4>Related News</h4>
+            <div className="section-title">Related News</div>
             <ul>
                 {props.data.map((text, i) => (
-                    <li id={i}>{text}</li>
+                    <li key={i} id={i}>{text}</li>
                 ))}
             </ul>
         </Container>
