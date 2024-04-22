@@ -8,6 +8,7 @@ export default function WhatIf(props) {
         if (video) {
             video.playbackRate = 0.25;
             video.loop = true;
+            video.autoplay = true;
         }
     })
 
