@@ -1,31 +1,21 @@
 import React, {useEffect} from 'react';
 import Container from 'react-bootstrap/Container';
+import {Col, Row} from "react-bootstrap";
+
 
 export default function WhatIf(props) {
 
-    useEffect(() => {
-        let video = document.querySelector("video");
-        if (video) {
-            video.playbackRate = 0.25;
-            video.loop = true;
-            video.autoplay = true;
-        }
-    })
-
-    let media;
-    if (props.data.includes("data:image/"))
-        media = <img alt="" src={props.data} style={{maxHeight: 100}}/>
-    else {
-        media = <div dangerouslySetInnerHTML={{__html: props.data}}/>
-    }
-
-    return (
-        <Container>
-            <div className="section-title">What if HK?</div>
-            <div align={'center'}>
-                {media}
-                <div>{props.text}</div>
-            </div>
+   return (
+        <Container className="whatif-card">
+            <h2 className="whatif-title">What If Hong Kong</h2>
+            <Row>
+                <Col className="whatif-img col-6">
+                    <img alt="" src={`data:image/jpeg;base64,${props.data[0]}`}/>
+                </Col>
+                <Col className="whatif-img col-6">
+                    <img alt="" src={`data:image/jpeg;base64,${props.data[1]}`}/>
+                </Col>
+            </Row>
         </Container>
     )
 }

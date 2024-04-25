@@ -3,10 +3,10 @@ import Container from 'react-bootstrap/Container';
 
 export default function Elif(props) {
     return (
-        <Container >
-            <div className="section-title">ELIF</div>
-            <div align={'center'}>
-                <div>{ props.data }</div>
+        <Container className="elif-card">
+            <div className="elif-title">ELIF</div>
+            <div className="elif-content">
+                { props.data }
             </div>
         </Container>
     )

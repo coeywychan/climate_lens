@@ -1,0 +1,51 @@
+.summary-card {
+    border-radius: 10px;
+    background-color: #76b99c;
+    display: flex;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 450px;
+    flex-direction: column;
+    font-size: 12px;
+    color: #fff;
+    font-weight: 400;
+    text-align: justify;
+    padding: 20px 15px;
+}
+.summary-title {
+    font: 800 18px "Noto Sans", sans-serif;
+}
+
+.summary-content {
+    margin-top: 10px;
+    font: 400 12px/20px "Noto Sans", sans-serif;
+}
+
+
+.highlight-item {
+    display: flex;
+    gap: 8px;
+    margin-top: 25px;
+}
+.highlight-dot {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    margin: auto 0;
+}
+.red {
+    background-color: #d12121;
+}
+.yellow {
+    background-color: #ffc01e;
+    align-self: start;
+}
+.green {
+    background-color: #6feb35;
+    align-self: start;
+}
+.highlight-text {
+    font-family: "Noto Sans", sans-serif;
+    flex-grow: 1;
+    flex-basis: auto;
+}

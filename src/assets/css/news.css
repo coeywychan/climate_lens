@@ -1,0 +1,39 @@
+.news-card {
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 450px;
+    text-align: justify;
+    padding: 20px 0px 20px 0px;
+}
+
+.news-more {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: start;
+    font-size: 18px;
+    color: #404958;
+    font-weight: 800;
+    text-align: justify;
+    font-family: "Noto Sans", sans-serif;
+    padding: 15px 0px 10px 0px;
+}
+
+.news-img {
+    aspect-ratio: 1;
+    object-position: center;
+    min-height: 100%;
+}
+
+.news-title {
+    margin-top: 6px;
+    font: 14px "Noto Sans", sans-serif;
+}
+
+.news-snippet {
+    font: 12px "Noto Sans", sans-serif;
+    margin-top: 7px;
+}

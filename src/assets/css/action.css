@@ -1,0 +1,58 @@
+.action-card {
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    min-height: 313px;
+    width: 100%;
+    padding: 20px 0px 20px 0px;
+    max-width: 450px;
+    text-align: justify;
+}
+
+.action-content {
+    padding: 30px 10px 10px 10px;
+}
+
+.action-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.action-title {
+    margin-left: 20px;
+    position: relative;
+    color: #fff;
+    text-align: justify;
+    font: 800 18px "Noto Sans", sans-serif;
+}
+
+.action-icon {
+    margin-left: 15px;
+    aspect-ratio: 2.33;
+    object-fit: auto;
+    object-position: center;
+    width: 100%;
+}
+
+.action-details {
+    color: #fff;
+    position: relative;
+    font: 500 14px/18px "Noto Sans", sans-serif;
+    margin-right: 15px;
+}
+
+.learn-more {
+    position: relative;
+    border-radius: 50px;
+    background-color: #fff;
+    align-self: center;
+    margin-top: 28px;
+    color: #404958;
+    text-align: center;
+    justify-content: center;
+    padding: 9px 20px;
+    font: 800 14px "Noto Sans", sans-serif;
+}
