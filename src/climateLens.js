@@ -1,6 +1,5 @@
 import React from 'react';
 import {useEffect, useState} from 'react'
-import Button from 'react-bootstrap/Button';
 import Spinner from 'react-bootstrap/Spinner';
 
 import Header from './header';
@@ -12,29 +11,31 @@ import Action from "./action";
 import News from "./news";
 import ngo from "./data/ngo.json"
 
-function fetchData(url, setState) {
+
+function fetchData(tabUrl, setState) {
+    let url = `https://climate-lens-cpk6gb64hq-uc.a.run.app/api/v1/` +
+        `climate_lens?user_region=hongkong&user_lang=english&url=${tabUrl}`
     fetch(url)
         .then(response => response.json())
         .then(json => setState(json))
         .catch(error => console.error(error))
 }
 
-function getUrl(tabUrl) {
-    return `https://climate-lens-cpk6gb64hq-uc.a.run.app/api/v1/climate_lens?
-        user_region=hongkong&user_lang=english&url=${tabUrl}`
-}
-
-
 function ClimateLens() {
 
+    const [url, setUrl] = useState(null);
     const [data, setData] = useState(null);
 
     useEffect(() => {
         chrome.tabs.query({active: true, lastFocusedWindow: true})
-            .then(tabs => getUrl(tabs[0].url))
-            .then(url => fetchData(url, setData))
-            .catch(error => console.error(error));
+            .then(tabs => tabs[0].url)
+            .then(tabUrl => {
+                fetchData(tabUrl, setData);
+                setUrl(tabUrl)
+            })
+            .catch(error => console.error(error))
     }, []);
+
 
     return (
         <div>
@@ -49,7 +50,7 @@ function ClimateLens() {
 
                         <WhatIf data={data.images}/>
 
-                        <Social/>
+                        <Social url={url} summary={data.summary}/>
 
                         <Action data={ngo.data}/>
 

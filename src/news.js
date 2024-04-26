@@ -15,10 +15,10 @@ export default function News(props) {
       <div className="news-more">More News</div>
           <a href={props.data.link}>
             <Row style={{"paddingTop": "10px"}}>
-              <Col className="col-3" style={{"vertical-align": "middle"}}>
+              <Col className="col-3" style={{"verticalAlign": "middle"}}>
                 <img className="news-img" src={img}/>
               </Col>
-              <Col className="col-9" style={{"vertical-align": "middle"}}>
+              <Col className="col-9" style={{"verticalAlign": "middle"}}>
                 <div className="news-title"> {props.data.title}</div>
                 <div className="news-snippet"> {props.data.snippet}</div>
               </Col>

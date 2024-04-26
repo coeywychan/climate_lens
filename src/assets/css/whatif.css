@@ -19,7 +19,7 @@
     font: 800 18px "Noto Sans", sans-serif;
 }
 
-.whatif-img > img {
+.whatif-img img {
     justify-content: center;
     max-height: 200px;
     border-radius: 5%;

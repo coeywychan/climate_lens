@@ -7,15 +7,8 @@
   "background": {
     "service_worker": "background.js"
   },
-  "content_scripts": [
-    {
-      "matches": ["https://www.washingtonpost.com/weather/*"],
-      "js": ["content.js"]
-    }
-  ],
   "permissions": ["sidePanel", "tabs", "storage"],
   "host_permissions": [
-    "https://www.washingtonpost.com/weather/*",
-    "https://developer.mozilla.org/*"
+    "<all_urls>"
   ]
 }
