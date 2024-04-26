@@ -22,5 +22,6 @@
 .whatif-img > img {
     justify-content: center;
     max-height: 200px;
+    border-radius: 5%;
 }
 
