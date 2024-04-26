@@ -53,7 +53,7 @@ function ClimateLens() {
 
                         <Action data={ngo.data}/>
 
-                        <News data={data.suggested_links}/>
+                        <News data={data.suggested_links[0]}/>
                     </div>
                 ) : (
                     <div className="centered">
